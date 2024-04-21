@@ -67,12 +67,12 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4 pt-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            Greetings! I'm an affable and enthusiastic individual with a
+            Greetings! I&apos;m an affable and enthusiastic individual with a
             profound passion for technology. Holding a National Diploma in
             Electrical Engineering from the Central University of Technology,
             Free State, South Africa, and a Google IT Support Professional
-            Certificate from Coursera, I've embarked on an exciting journey in
-            the tech realm.
+            Certificate from Coursera, I&apos;ve embarked on an exciting journey
+            in the tech realm.
             <br />
             <br />
             My venture into programming commenced in 2020 during a global
