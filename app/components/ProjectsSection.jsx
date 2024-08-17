@@ -1,12 +1,23 @@
 "use client";
-import React, { useState, useRef } from 'react';
-import ProjectCard from './ProjectCard';
-import ProjectTag from './ProjectTag';
+import React, { useState, useRef } from "react";
+import ProjectCard from "./ProjectCard";
+import ProjectTag from "./ProjectTag";
 import { animate, motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
     id: 1,
+    title: "Edusity",
+    description:
+      "This is a website of a fictional university called Edusity, built using ReactJS.",
+    image: "/images/projects/edusity.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/SidneyRamphalile/Edusity",
+    target: "_blank",
+    previewUrl: "https://adorable-squirrel-9d1076.netlify.app/",
+  },
+  {
+    id: 2,
     title: "Book My Show Clone",
     description:
       "This is a clone of the Book My Show website, where one can buy or rent movies.",
@@ -18,7 +29,7 @@ const projectsData = [
     previewUrl: "https://book-my-show-clone-application.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Zomato Landing Page",
     description: "This is a Front-End landing page of Zomato clone.",
     image: "/images/projects/zomato-landing-page.png",
@@ -28,10 +39,10 @@ const projectsData = [
     previewUrl: "https://zomato-landing-page-clone-za.netlify.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Eduford",
     description:
-      "This is a Front-End of a fictitious university called Eduford. ",
+      "This is a Front-End of a fictitious university called Eduford.",
     image: "/images/projects/eduford.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/SidneyRamphalile/Eduford-Fictitious-University",
@@ -39,7 +50,7 @@ const projectsData = [
     previewUrl: "https://eduford-fictitious-university.netlify.app/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Business Website",
     description: "This is a Front-End of a fictitious business website.",
     image: "/images/projects/business-website.png",
@@ -49,7 +60,7 @@ const projectsData = [
     previewUrl: "https://sid-business-website.netlify.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Disney+ Hotstar Clone",
     description: "This is a Front-End of the Disney+ Hotstar clone.",
     image: "/images/projects/hotstar.png",
@@ -59,7 +70,7 @@ const projectsData = [
     previewUrl: "https://disney-hot-naledi-clone.netlify.app/",
   },
   {
-    id: 6,
+    id: 7,
     title: "Vegetarian Taco Shop",
     description: "This is a Front-End of a fictitious Vegetarian Taco Shop.",
     image: "/images/projects/vts.png",
@@ -70,7 +81,7 @@ const projectsData = [
     previewUrl: "https://imaginative-sprite-c60152.netlify.app/",
   },
   {
-    id: 7,
+    id: 8,
     title: "Vidtube - Youtube Clone",
     description: "This is a Front-End of a Youtube look-alike clone, Vidtube.",
     image: "/images/projects/vidtube.png",
@@ -80,7 +91,7 @@ const projectsData = [
     previewUrl: "https://vidtube-youtube-clonee.netlify.app/",
   },
   {
-    id: 8,
+    id: 9,
     title: "Sid Tasky App",
     description:
       "This is a basic note-taking app, where you can even have an image of notes represented.",
@@ -91,7 +102,7 @@ const projectsData = [
     previewUrl: "https://sid-tasky-app.netlify.app/",
   },
   {
-    id: 9,
+    id: 10,
     title: "Maruo Plant and Machinery",
     description:
       "This is a Front-End of a company which deals with construction vehicles and equipment, Maruo Plant and Machinery.",
@@ -102,7 +113,7 @@ const projectsData = [
     previewUrl: "https://whimsical-begonia567hello7world.netlify.app/",
   },
   {
-    id: 10,
+    id: 11,
     title: "Thaba Nchu SDA Church",
     description:
       "This is my first ever website built. It's a website of Thaba Nchu Seventh-Day Adventist church.",
@@ -116,6 +127,7 @@ const projectsData = [
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
+  const [showAll, setShowAll] = useState(false); // State to manage project visibility
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -123,13 +135,23 @@ const ProjectsSection = () => {
     setTag(newTag);
   };
 
-  const filteredProjects = projectsData.filter((project) => 
+  const handleSeeMore = () => {
+    setShowAll(!showAll); // Toggle visibility of more projects
+  };
+
+  // Filter projects based on selected tag
+  const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag)
   );
 
+  // Determine the number of projects to show based on showAll state
+  const projectsToDisplay = showAll
+    ? filteredProjects
+    : filteredProjects.slice(0, 6);
+
   const cardVariants = {
-    initial: { y: 50, opacity: 0},
-    animate: { y: 0, opacity: 1},
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
   };
 
   return (
@@ -155,7 +177,7 @@ const ProjectsSection = () => {
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
+        {projectsToDisplay.map((project, index) => (
           <motion.li
             key={index}
             variants={cardVariants}
@@ -174,8 +196,18 @@ const ProjectsSection = () => {
           </motion.li>
         ))}
       </ul>
+      {filteredProjects.length > 6 && (
+        <div className="text-center mt-8">
+          <button
+            onClick={handleSeeMore}
+            className="py-2 px-4 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-lg transition-colors"
+          >
+            {showAll ? "See Less" : "See More"}
+          </button>
+        </div>
+      )}
     </section>
   );
-}
+};
 
 export default ProjectsSection;
