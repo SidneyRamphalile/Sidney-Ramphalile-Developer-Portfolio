@@ -1,13 +1,18 @@
-"use client"
-import React from 'react';
+"use client";
+import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
-
-  
 const HeroSection = () => {
+  const handleHireMeClick = (e) => {
+    e.preventDefault(); // Prevent default link behavior
+    const target = document.querySelector("#contact"); // Select the target section by its ID
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the contact section
+    }
+  };
+
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -24,9 +29,8 @@ const HeroSection = () => {
             <br />
             <TypeAnimation
               sequence={[
-                // Same substring at the start will only be typed out once, initially
                 "Sidney",
-                1000, // wait 1s before replacing "SIdney" with "Full Stack Web Developer"
+                1000,
                 "Full Stack Web Developer",
                 1000,
                 "National Diploma in Electrical Engineering graduate",
@@ -45,24 +49,13 @@ const HeroSection = () => {
             JavaScript, React, Tailwind, and MongoDB.
           </p>
 
-          {/* <div>
-            <button
-             className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white hover:bg-slate-200">
-              Hire Me
-            </button>
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-800 text-white mt-3">
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download CV
-              </span>
-            </button>
-          </div> */}
           <div>
-            <Link
-              href="/#contact"
+            <button
+              onClick={handleHireMeClick} // Smooth scroll when clicked
               className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white hover:bg-slate-200"
             >
               Hire Me
-            </Link>
+            </button>
             <a
               href="/Mokuoane-Sidney-Ramphalile-CV.pdf"
               target="_blank"
@@ -93,7 +86,6 @@ const HeroSection = () => {
       </div>
     </section>
   );
-}
+};
 
 export default HeroSection;
-
