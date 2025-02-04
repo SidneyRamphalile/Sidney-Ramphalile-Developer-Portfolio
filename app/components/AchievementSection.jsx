@@ -17,11 +17,11 @@ const achievementsList = [
   },
   {
     metric: "Awards on LinkedIn",
-    value: "240",
+    value: "253",
   },
   {
     metric: "Years in Web Development",
-    value: "4",
+    value: "5",
   },
 ];
 
