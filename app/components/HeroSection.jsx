@@ -44,7 +44,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            I have 5 years of experience building websites. Currently, I love to
+            I have 4 years of experience building websites. Currently, I love to
             work on web applications using technologies like HTML, CSS,
             JavaScript, React, Tailwind, and MongoDB.
           </p>

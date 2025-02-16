@@ -21,7 +21,7 @@ const achievementsList = [
   },
   {
     metric: "Years in Web Development",
-    value: "5",
+    value: "4",
   },
 ];
 
