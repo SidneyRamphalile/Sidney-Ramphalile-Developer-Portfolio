@@ -15,6 +15,7 @@ const TAB_DATA = [
         <li>Mongo DB, SQL</li>
         <li>Python</li>
         <li>GitHub</li>
+        <li>Linux</li>
       </ul>
     ),
   },

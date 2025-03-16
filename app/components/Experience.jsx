@@ -68,6 +68,27 @@ const Experience = () => {
       bgColor: "bg-green-400",
       image: "/images/projects/node.png",
     },
+    {
+      id: 10,
+      name: "Linux",
+      color: "border-yellow-400",
+      bgColor: "bg-yellow-400",
+      image: "/images/projects/linux.png",
+    },
+    {
+      id: 11,
+      name: "Python",
+      color: "border-green-600",
+      bgColor: "bg-green-600",
+      image: "/images/projects/python.png",
+    },
+    {
+      id: 12,
+      name: "PostgreSQL",
+      color: "border-blue-400",
+      bgColor: "bg-blue-400",
+      image: "/images/projects/postgresql.png",
+    },
   ];
 
   return (
@@ -99,4 +120,3 @@ const Experience = () => {
 };
 
 export default Experience;
-
