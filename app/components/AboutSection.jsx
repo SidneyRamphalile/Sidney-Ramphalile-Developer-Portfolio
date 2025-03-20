@@ -41,6 +41,8 @@ const TAB_DATA = [
         <li>Full Stack Web Development</li>
         <br />
         <li>Google IT Support Professional Certificate </li>
+        <br />
+        <li>Google Cybersecurity Professional Certificate </li>
       </ul>
     ),
   },
@@ -71,8 +73,8 @@ const AboutSection = () => {
             Greetings! I&apos;m an affable and enthusiastic individual with a
             profound passion for technology. Holding a National Diploma in
             Electrical Engineering from the Central University of Technology,
-            Free State, South Africa, and a Google IT Support Professional
-            Certificate from Coursera, I&apos;ve embarked on an exciting journey
+            Free State, South Africa, the Google IT Support Professional
+            Certificate and the Google Cybersecurity Professional Certificate from Coursera, I&apos;ve embarked on an exciting journey
             in the tech realm.
             <br />
             <br />
