@@ -43,6 +43,8 @@ const TAB_DATA = [
         <li>Google IT Support Professional Certificate </li>
         <br />
         <li>Google Cybersecurity Professional Certificate </li>
+        <br />
+        <li>Google Data Analytics Professional Certificate </li>
       </ul>
     ),
   },

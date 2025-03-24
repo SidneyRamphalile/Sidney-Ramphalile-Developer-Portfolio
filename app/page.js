@@ -7,6 +7,9 @@ import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
 import AchievementSection from "./components/AchievementSection";
 import Experience from "./components/Experience";
+import DigitalBadges from "./components/DigitalBadges";
+
+
 
 export default function Home() {
   return (
@@ -16,6 +19,7 @@ export default function Home() {
         <HeroSection />
         <AchievementSection/>
         <AboutSection/>
+        <DigitalBadges/>
         <Experience/>
         <ProjectsSection/>
         <EmailSection/>

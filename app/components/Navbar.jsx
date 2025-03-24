@@ -11,6 +11,10 @@ const navLinks = [
     path: "#about",
   },
   {
+    title: "Digital Badges",
+    path: "#digital-badges",
+  },
+  {
     title: "Experience",
     path: "#experience",
   },

@@ -39,6 +39,8 @@ const HeroSection = () => {
                 1000,
                 "Google Cybersecurity Professional Certificate graduate",
                 1000,
+                "Google Data Analytics Professional Certificate graduate",
+                1000,
               ]}
               wrapper="span"
               speed={50}
