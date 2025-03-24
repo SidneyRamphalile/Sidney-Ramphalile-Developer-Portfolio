@@ -3,23 +3,26 @@ import Link from "next/link";
 const NavLink = ({ href, title, onClick }) => {
   const handleClick = (e) => {
     e.preventDefault(); // Prevent default link behavior
-    console.log("NavLink clicked"); // Checks if handleClick is called
+    console.log("NavLink clicked"); // Debugging
 
-    const target = document.querySelector(href); // Select the target element by its ID
+    const target = document.querySelector(href);
     if (target) {
-      target.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the target element
+      target.scrollIntoView({ behavior: "smooth" });
     }
 
     if (onClick) {
-      onClick(); // Call the onClick function passed from parent (Navbar.jsx)
+      onClick(); // Close mobile menu if open
     }
   };
 
   return (
     <Link
       href={href}
-      className="block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white"
-      onClick={handleClick} // Call handleClick when the link is clicked
+      className="relative block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 
+      hover:text-purple-400 transition-colors duration-300 
+      after:content-[''] after:absolute after:left-0 after:bottom-[-3px] after:w-0 after:h-[2px] 
+      after:bg-purple-500 hover:after:w-full after:transition-all after:duration-300"
+      onClick={handleClick}
     >
       {title}
     </Link>
@@ -27,5 +30,3 @@ const NavLink = ({ href, title, onClick }) => {
 };
 
 export default NavLink;
-
-
