@@ -37,7 +37,7 @@ const AchievementsSection = () => {
           return (
             <div
               key={index}
-              className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
+              className="flex flex-col items-center justify-center text-center w-full mx-4 my-4 sm:my-0"
             >
               <h2 className="text-white text-4xl font-bold flex flex-row">
                 {achievement.prefix}
@@ -56,7 +56,9 @@ const AchievementsSection = () => {
                 />
                 {achievement.postfix}
               </h2>
-              <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
+              <p className="text-[#ADB7BE] text-base text-center">
+                {achievement.metric}
+              </p>
             </div>
           );
         })}
