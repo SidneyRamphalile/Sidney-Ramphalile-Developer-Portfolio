@@ -38,13 +38,15 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>Full Stack Web Development</li>
+        <li>Full Stack Web Development Training Certificate</li>
         <br />
         <li>Google IT Support Professional Certificate </li>
         <br />
         <li>Google Cybersecurity Professional Certificate </li>
         <br />
         <li>Google Data Analytics Professional Certificate </li>
+        <br />
+        <li>120 Hour Advanced TEFL/TESOL Certificate </li>
       </ul>
     ),
   },
