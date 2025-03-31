@@ -75,11 +75,14 @@ const AboutSection = () => {
           <h2 className="text-4xl font-bold text-white mb-4 pt-4">About Me</h2>
           <p className="text-base lg:text-lg">
             Greetings! I&apos;m an affable and enthusiastic individual with a
-            profound passion for technology. Holding a National Diploma in
-            Electrical Engineering from the Central University of Technology,
-            Free State, South Africa, the Google IT Support Professional
-            Certificate and the Google Cybersecurity Professional Certificate from Coursera, I&apos;ve embarked on an exciting journey
-            in the tech realm.
+            deep passion for technology. I hold a National Diploma in Electrical
+            Engineering from the Central University of Technology, Free State,
+            South Africa, along with multiple industry-recognized
+            certifications, including the Google IT Support Professional
+            Certificate, Google Cybersecurity Professional Certificate, and the
+            Google Data Analytics Professional Certificate from Coursera. My
+            journey in the tech world is driven by continuous learning and a
+            commitment to developing innovative solutions.
             <br />
             <br />
             My venture into programming commenced in 2020 during a global
