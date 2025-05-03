@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
               gtag('config', 'G-MHTJ28PNGB');
             `,
           }}
-        ></script>
+        />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
