@@ -27,6 +27,12 @@ const digitalBadges = [
     image: "/images/projects/google-ai-essentials.png",
     link: "https://www.credly.com/badges/160c0bcf-960f-474b-832b-24251af46a49",
   },
+  {
+    id: 4,
+    name: "AWS Knowledge: Cloud Essentials",
+    image: "/images/projects/aws-knowledge-cloud-essentials.png",
+    link: "https://www.credly.com/badges/01b96f5e-82df-47dd-a024-d3d2ccc2cd9c",
+  },
 ];
 
 const DigitalBadges = () => {
