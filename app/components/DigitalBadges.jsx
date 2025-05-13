@@ -28,10 +28,16 @@ const digitalBadges = [
     link: "https://www.credly.com/badges/160c0bcf-960f-474b-832b-24251af46a49",
   },
   {
-    id: 4,
+    id: 5,
     name: "AWS Knowledge: Cloud Essentials",
     image: "/images/projects/aws-knowledge-cloud-essentials.png",
     link: "https://www.credly.com/badges/01b96f5e-82df-47dd-a024-d3d2ccc2cd9c",
+  },
+  {
+    id: 6,
+    name: "AWS Educate Introduction to Cloud 101",
+    image: "/images/projects/aws-educate-introduction-to-cloud-101.png",
+    link: "https://www.credly.com/badges/95dc0495-efac-4ec6-9f08-4930bf7b789a",
   },
 ];
 
