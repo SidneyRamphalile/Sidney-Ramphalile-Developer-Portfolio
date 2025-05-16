@@ -39,6 +39,18 @@ const digitalBadges = [
     image: "/images/projects/aws-educate-introduction-to-cloud-101.png",
     link: "https://www.credly.com/badges/95dc0495-efac-4ec6-9f08-4930bf7b789a",
   },
+  {
+    id: 7,
+    name: "AWS Educate Getting Started with Storage",
+    image: "/images/projects/aws-educate-getting-started-with-storage.png",
+    link: "https://www.credly.com/badges/faf24af5-9480-4a89-be14-699fd96e9a54",
+  },
+  {
+    id: 8,
+    name: "AWS Educate Getting Started with Compute",
+    image: "/images/projects/aws-educate-getting-started-with-compute.png",
+    link: "https://www.credly.com/badges/7deff335-1ba3-4e42-8992-5219e5999a41",
+  },
 ];
 
 const DigitalBadges = () => {
