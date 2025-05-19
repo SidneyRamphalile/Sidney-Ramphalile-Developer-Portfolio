@@ -43,6 +43,8 @@ const TAB_DATA = [
         <br />
         <li>Google IT Support Professional Certificate </li>
         <br />
+        <li>Microsoft IT Support Specialist Professional Certificate </li>
+        <br />
         <li>Google Cybersecurity Professional Certificate </li>
         <br />
         <li>Google Data Analytics Professional Certificate </li>
@@ -80,6 +82,7 @@ const AboutSection = () => {
             Engineering from the Central University of Technology, Free State,
             South Africa, along with multiple industry-recognized
             certifications, including the Google IT Support Professional
+            Certificate, Microsoft IT Support Specialist Professional
             Certificate, Google Cybersecurity Professional Certificate, and the
             Google Data Analytics Professional Certificate from Coursera. My
             journey in the tech world is driven by continuous learning and a
