@@ -7,7 +7,7 @@ import { animate, motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "Namanyane Primary School Website",
+    title: "Namanyane Primary School",
     description:
       "This is a website of Namanyane Primary School, a school in my hometown, built using ReactJS.",
     image: "/images/projects/namanyane.png",
