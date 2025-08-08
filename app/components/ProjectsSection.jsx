@@ -7,6 +7,17 @@ import { animate, motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
+    title: "Kreativ Design & Print",
+    description:
+      "This is a website of Kreativ Design & Print, a company in Bloemfontein, built using ReactJS.",
+    image: "/images/projects/kreativ-design.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/SidneyRamphalile/kreativebrands",
+    target: "_blank",
+    previewUrl: "https://polite-quokka-0e16a4.netlify.app/",
+  },
+  {
+    id: 2,
     title: "Namanyane Primary School",
     description:
       "This is a website of Namanyane Primary School, a school in my hometown, built using ReactJS.",
@@ -17,7 +28,7 @@ const projectsData = [
     previewUrl: "https://stunning-halva-4a5ca5.netlify.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Advanced MERN Authentication",
     description:
       "This is a MERN Authentication where users can create an account, etc. It has a forgot password feature.",
@@ -28,7 +39,7 @@ const projectsData = [
     previewUrl: "https://advanced-mern-auth-agj6.onrender.com/login",
   },
   {
-    id: 3,
+    id: 4,
     title: "Mini Store",
     description:
       "This is a mini store where a user can create, read, update, and delete products.",
@@ -39,7 +50,7 @@ const projectsData = [
     previewUrl: "https://mini-store-2lla.onrender.com/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Edusity",
     description:
       "This is a website of a fictional university called Edusity, built using ReactJS.",
@@ -50,7 +61,7 @@ const projectsData = [
     previewUrl: "https://adorable-squirrel-9d1076.netlify.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Book My Show Clone",
     description:
       "This is a clone of the Book My Show website, where one can buy or rent movies.",
@@ -62,7 +73,7 @@ const projectsData = [
     previewUrl: "https://book-my-show-clone-application.vercel.app/",
   },
   {
-    id: 6,
+    id: 7,
     title: "Zomato Landing Page",
     description: "This is a Front-End landing page of Zomato clone.",
     image: "/images/projects/zomato-landing-page.png",
@@ -72,7 +83,7 @@ const projectsData = [
     previewUrl: "https://zomato-landing-page-clone-za.netlify.app/",
   },
   {
-    id: 7,
+    id: 8,
     title: "Eduford",
     description:
       "This is a Front-End of a fictitious university called Eduford.",
@@ -83,7 +94,7 @@ const projectsData = [
     previewUrl: "https://eduford-fictitious-university.netlify.app/",
   },
   {
-    id: 8,
+    id: 9,
     title: "Business Website",
     description: "This is a Front-End of a fictitious business website.",
     image: "/images/projects/business-website.png",
@@ -93,7 +104,7 @@ const projectsData = [
     previewUrl: "https://sid-business-website.netlify.app/",
   },
   {
-    id: 9,
+    id: 10,
     title: "Disney+ Hotstar Clone",
     description: "This is a Front-End of the Disney+ Hotstar clone.",
     image: "/images/projects/hotstar.png",
@@ -103,7 +114,7 @@ const projectsData = [
     previewUrl: "https://disney-hot-naledi-clone.netlify.app/",
   },
   {
-    id: 10,
+    id: 11,
     title: "Vegetarian Taco Shop",
     description: "This is a Front-End of a fictitious Vegetarian Taco Shop.",
     image: "/images/projects/vts.png",
@@ -114,7 +125,7 @@ const projectsData = [
     previewUrl: "https://imaginative-sprite-c60152.netlify.app/",
   },
   {
-    id: 11,
+    id: 12,
     title: "Vidtube - Youtube Clone",
     description: "This is a Front-End of a Youtube look-alike clone, Vidtube.",
     image: "/images/projects/vidtube.png",
@@ -124,7 +135,7 @@ const projectsData = [
     previewUrl: "https://vidtube-youtube-clonee.netlify.app/",
   },
   {
-    id: 12,
+    id: 13,
     title: "Sid Tasky App",
     description:
       "This is a basic note-taking app, where you can even have an image of notes represented.",
@@ -135,7 +146,7 @@ const projectsData = [
     previewUrl: "https://sid-tasky-app.netlify.app/",
   },
   {
-    id: 13,
+    id: 14,
     title: "Maruo Plant and Machinery",
     description:
       "This is a Front-End of a company which deals with construction vehicles and equipment, Maruo Plant and Machinery.",
@@ -146,7 +157,7 @@ const projectsData = [
     previewUrl: "https://whimsical-begonia567hello7world.netlify.app/",
   },
   {
-    id: 14,
+    id: 15,
     title: "Thaba Nchu SDA Church",
     description:
       "This is my first ever website built. It's a website of Thaba Nchu Seventh-Day Adventist church.",
