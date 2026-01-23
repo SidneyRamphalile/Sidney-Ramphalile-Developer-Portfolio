@@ -1,7 +1,7 @@
-"use client"
-import React, { useTransition, useState } from 'react';
-import Image from 'next/image';
-import TabButton from './TabButton';
+"use client";
+import React, { useTransition, useState } from "react";
+import Image from "next/image";
+import TabButton from "./TabButton";
 
 const TAB_DATA = [
   {
@@ -16,6 +16,7 @@ const TAB_DATA = [
         <li>Python</li>
         <li>GitHub</li>
         <li>Linux</li>
+        <li>Microsoft Azure</li>
         <li>Amazon Web Services (AWS)</li>
       </ul>
     ),
@@ -40,18 +41,32 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Microsoft Certified: Azure Fundamentals (AZ900)</li>
-        <br />
+        {/* Add MS900 here AFTER you pass the exam */}
+      </ul>
+    ),
+  },
+  {
+    title: "Professional Development",
+    id: "professional-development",
+    content: (
+      <ul className="list-disc pl-2">
         <li>Full Stack Web Development Training Certificate</li>
         <br />
-        <li>Google IT Support Professional Certificate </li>
+        <li>Google IT Support Professional Certificate (Coursera)</li>
         <br />
-        <li>Microsoft IT Support Specialist Professional Certificate </li>
+        <li>
+          Microsoft IT Support Specialist Professional Certificate (Coursera)
+        </li>
         <br />
-        <li>Google Cybersecurity Professional Certificate </li>
+        <li>Google Cybersecurity Professional Certificate (Coursera)</li>
         <br />
-        <li>Google Data Analytics Professional Certificate </li>
+        <li>Google Data Analytics Professional Certificate (Coursera)</li>
         <br />
-        <li>120 Hour Advanced TEFL/TESOL Certificate </li>
+        <li>120 Hour Advanced TEFL/TESOL Certificate</li>
+        <br />
+        <li>Google AI Essentials</li>
+        <br />
+        <li>AWS Cloud Essentials & Introduction to Cloud</li>
       </ul>
     ),
   },
@@ -60,12 +75,12 @@ const TAB_DATA = [
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
-  
+
   const handleTabChange = (id) => {
     startTransition(() => {
-        setTab(id);
+      setTab(id);
     });
-  }
+  };
 
   return (
     <section id="about" className="text-white">
@@ -82,13 +97,15 @@ const AboutSection = () => {
             Greetings! I&apos;m an affable and enthusiastic individual with a
             deep passion for technology. I hold a National Diploma in Electrical
             Engineering from the Central University of Technology, Free State,
-            South Africa, along with multiple industry-recognized
-            certifications, including the Google IT Support Professional
-            Certificate, Microsoft IT Support Specialist Professional
-            Certificate, Google Cybersecurity Professional Certificate, and the
-            Google Data Analytics Professional Certificate from Coursera. My
-            journey in the tech world is driven by continuous learning and a
-            commitment to developing innovative solutions.
+            South Africa, along with industry-recognized Microsoft certification
+            in Azure Fundamentals (AZ900).
+            <br />
+            <br />
+            I&apos;ve further expanded my knowledge through extensive
+            professional development including Google and Microsoft professional
+            certificates in IT Support, Cybersecurity, Data Analytics, and AI
+            Essentials, demonstrating my commitment to continuous learning in
+            the rapidly evolving tech landscape.
             <br />
             <br />
             My venture into programming commenced in 2020 during a global
@@ -98,27 +115,30 @@ const AboutSection = () => {
             Coursera, LinkedIn Learning, and other platforms to deepen my
             understanding and skills in the vast landscape of technology.
           </p>
-          <div className="flex flex-row mt-8">
+          <div className="flex flex-row mt-8 flex-wrap">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
             >
-              {" "}
-              Skills{" "}
+              Skills
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
             >
-              {" "}
-              Education{" "}
+              Education
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("certifications")}
               active={tab === "certifications"}
             >
-              {" "}
-              Certifications{" "}
+              Certifications
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("professional-development")}
+              active={tab === "professional-development"}
+            >
+              Professional Development
             </TabButton>
           </div>
           <div className="mt-8">
@@ -128,6 +148,6 @@ const AboutSection = () => {
       </div>
     </section>
   );
-}
+};
 
 export default AboutSection;
