@@ -35,14 +35,7 @@ const HeroSection = () => {
                 1000,
                 "National Diploma in Electrical Engineering graduate",
                 1000,
-                "Google IT Support Professional Certificate graduate",
-                1000,
-                "Microsoft IT Support Specialist Professional Certificate graduate",
-                1000,
-                "Google Cybersecurity Professional Certificate graduate",
-                1000,
-                "Google Data Analytics Professional Certificate graduate",
-                1000,
+                "Microsoft Certified: Azure Fundamentals (AZ900)",
               ]}
               wrapper="span"
               speed={50}

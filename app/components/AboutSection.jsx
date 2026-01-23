@@ -39,6 +39,8 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
+        <li>Microsoft Certified: Azure Fundamentals (AZ900)</li>
+        <br />
         <li>Full Stack Web Development Training Certificate</li>
         <br />
         <li>Google IT Support Professional Certificate </li>
