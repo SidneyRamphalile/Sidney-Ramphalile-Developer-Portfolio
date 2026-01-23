@@ -50,7 +50,7 @@ const TAB_DATA = [
     id: "professional-development",
     content: (
       <ul className="list-disc pl-2">
-        <li>Full Stack Web Development Training Certificate</li>
+        <li>Full Stack Web Development Training Certificate (DevTown)</li>
         <br />
         <li>Google IT Support Professional Certificate (Coursera)</li>
         <br />
@@ -62,11 +62,7 @@ const TAB_DATA = [
         <br />
         <li>Google Data Analytics Professional Certificate (Coursera)</li>
         <br />
-        <li>120 Hour Advanced TEFL/TESOL Certificate</li>
-        <br />
-        <li>Google AI Essentials</li>
-        <br />
-        <li>AWS Cloud Essentials & Introduction to Cloud</li>
+        <li>120 Hour Advanced TEFL/TESOL Certificate (TEFL Universal)</li>
       </ul>
     ),
   },
