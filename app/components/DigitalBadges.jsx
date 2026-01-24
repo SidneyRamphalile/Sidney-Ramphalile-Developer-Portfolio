@@ -4,49 +4,55 @@ import React, { useState } from "react";
 const digitalBadges = [
   {
     id: 1,
+    name: "Microsoft Certified: Azure Fundamentals (AZ-900)",
+    image: "/images/projects/microsoft-certified-fundamentals-badge.png",
+    link: "https://learn.microsoft.com/en-us/users/sidneyramphalile-1829/credentials/463f2e170c5e0953",
+  },
+  {
+    id: 2,
     name: "Google IT Support Certificate",
     image: "/images/projects/google-it-support-certificate.2.png",
     link: "https://www.credly.com/badges/87de5de1-1a31-4cc1-9bb6-b80634e737c4",
   },
   {
-    id: 2,
+    id: 3,
     name: "Google Cybersecurity Certificate V2",
     image: "/images/projects/google-cybersecurity-certificate-v2.png",
     link: "https://www.credly.com/badges/93a44933-5235-40ea-b5de-e9d521070d07",
   },
   {
-    id: 3,
+    id: 4,
     name: "Google Data Analytics Professional Certificate",
     image:
       "/images/projects/google-data-analytics-professional-certificate.2.png",
     link: "https://www.credly.com/badges/49f7b744-92bc-42c9-84c8-ad3f52eb15c0",
   },
   {
-    id: 4,
+    id: 5,
     name: "Google AI Essentials",
     image: "/images/projects/google-ai-essentials.png",
     link: "https://www.credly.com/badges/160c0bcf-960f-474b-832b-24251af46a49",
   },
   {
-    id: 5,
+    id: 6,
     name: "AWS Knowledge: Cloud Essentials",
     image: "/images/projects/aws-knowledge-cloud-essentials.png",
     link: "https://www.credly.com/badges/01b96f5e-82df-47dd-a024-d3d2ccc2cd9c",
   },
   {
-    id: 6,
+    id: 7,
     name: "AWS Educate Introduction to Cloud 101",
     image: "/images/projects/aws-educate-introduction-to-cloud-101.png",
     link: "https://www.credly.com/badges/95dc0495-efac-4ec6-9f08-4930bf7b789a",
   },
   {
-    id: 7,
+    id: 8,
     name: "AWS Educate Getting Started with Storage",
     image: "/images/projects/aws-educate-getting-started-with-storage.png",
     link: "https://www.credly.com/badges/faf24af5-9480-4a89-be14-699fd96e9a54",
   },
   {
-    id: 8,
+    id: 9,
     name: "AWS Educate Getting Started with Compute",
     image: "/images/projects/aws-educate-getting-started-with-compute.png",
     link: "https://www.credly.com/badges/7deff335-1ba3-4e42-8992-5219e5999a41",
