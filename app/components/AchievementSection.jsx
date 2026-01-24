@@ -21,7 +21,7 @@ const achievementsList = [
   },
   {
     metric: "Digital Badges",
-    value: "8",
+    value: "9",
   },
   {
     metric: "Years in Web Development",
