@@ -41,7 +41,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Microsoft Certified: Azure Fundamentals (AZ900)</li>
-        {/* Add MS900 here AFTER you pass the exam */}
+        <li>Microsoft Certified: 365 Fundamentals (MS900)</li>
       </ul>
     ),
   },
@@ -94,7 +94,7 @@ const AboutSection = () => {
             deep passion for technology. I hold a National Diploma in Electrical
             Engineering from the Central University of Technology, Free State,
             South Africa, along with industry-recognized Microsoft certification
-            in Azure Fundamentals (AZ900).
+            in Azure Fundamentals (AZ900) and 365 Fundamentals (MS900).
             <br />
             <br />
             I&apos;ve further expanded my knowledge through extensive

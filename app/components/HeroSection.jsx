@@ -35,24 +35,6 @@ const HeroSection = () => {
                 1000,
                 "National Diploma in Electrical Engineering graduate",
                 1000,
-                "Microsoft Certified: Azure Fundamentals",
-                500, // Short pause before typing (AZ900)
-                "Microsoft Certified: Azure Fundamentals (AZ900)",
-                2500, // Longer pause to read the complete text
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-              deletionSpeed={70}
-            />
-            {/* <TypeAnimation
-              sequence={[
-                "Sidney",
-                1000,
-                "Full Stack Web Developer",
-                1000,
-                "National Diploma in Electrical Engineering graduate",
-                1000,
                 "Microsoft Certified: Azure Fundamentals (AZ900)",
                 1500,
                 "Microsoft Certified: 365 Fundamentals (MS900)",
@@ -62,7 +44,7 @@ const HeroSection = () => {
               speed={50}
               repeat={Infinity}
               deletionSpeed={70}
-            /> */}
+            />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             I have 5 years of experience building websites. Currently, I love to
