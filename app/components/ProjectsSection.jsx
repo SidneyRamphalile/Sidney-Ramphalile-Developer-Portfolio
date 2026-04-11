@@ -50,28 +50,7 @@ const projectsData = [
     target: "_blank",
     previewUrl: "https://stunning-halva-4a5ca5.netlify.app/",
   },
-  {
-    id: 5,
-    title: "Advanced MERN Authentication",
-    description:
-      "This is a MERN Authentication where users can create an account, etc. It has a forgot password feature.",
-    image: "/images/projects/auth.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/SidneyRamphalile/advanced-mern-auth",
-    target: "_blank",
-    previewUrl: "https://advanced-mern-auth-agj6.onrender.com/login",
-  },
-  {
-    id: 6,
-    title: "Mini Store",
-    description:
-      "This is a mini store where a user can create, read, update, and delete products.",
-    image: "/images/projects/mini-store.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/SidneyRamphalile/mini-store",
-    target: "_blank",
-    previewUrl: "https://mini-store-2lla.onrender.com/",
-  },
+
   {
     id: 7,
     title: "Edusity",
