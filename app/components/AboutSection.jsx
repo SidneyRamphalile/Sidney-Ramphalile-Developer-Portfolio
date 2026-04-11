@@ -41,7 +41,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Microsoft Certified: Azure Fundamentals (AZ900)</li>
-        <li>Microsoft Certified: 365 Fundamentals (MS900)</li>
+        <li>Microsoft 365 Certified: Fundamentals (MS900)</li>
       </ul>
     ),
   },
