@@ -1,49 +1,52 @@
 "use client"
 import React, { useState } from "react";
-import axios from "axios";
 import GitHubIcon from "../../public/github-icon.svg";
 import LinkedinIcon from "../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 
 
-// const accessKey = process.env.ACCESS_KEY;
-const accessKey = "e1133727-f31c-4c73-baef-35c6280ac3e6";
+// Server API route handles access key
+
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   async function handleSubmit(event) {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    setIsLoading(true);
+    setError(null);
     
-
-
-
-    // Add any additional form data you need, like access keys or form IDs.
-    formData.append("access_key", accessKey);
-
+    const formData = new FormData(event.target);
     const object = Object.fromEntries(formData);
     const jsonData = JSON.stringify(object);
 
     try {
-      const response = await axios.post(
-        "https://api.web3forms.com/submit",
-        jsonData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-        }
-      );
-      if (response.data.success) {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: jsonData,
+      });
+      
+      const resData = await response.json();
+      
+      if (response.ok && resData.success) {
         console.log("Form submitted successfully!");
-        window.alert("Message sent successfully! Thank you so much for your message. I will get back to you shortly! :-)"); // Display alert message
+        setEmailSubmitted(true);
+        event.target.reset(); // clear the form
+      } else {
+        console.error("Form submission error:", resData);
+        setError(resData.error || "Something went wrong. Please try again.");
       }
     } catch (error) {
       console.error("Form submission failed:", error);
-      // Optionally, handle error messages or retries here.
+      setError("Failed to send message. Please check your internet connection.");
+    } finally {
+      setIsLoading(false);
     }
   }
 
@@ -123,14 +126,46 @@ const EmailSection = () => {
               placeholder="Let's talk about..."
             />
           </div>
+          {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
           <button
             type="submit"
-            className="bg-purple-500 hover:bg-purple-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+            disabled={isLoading}
+            className="bg-purple-500 hover:bg-purple-600 disabled:bg-purple-800 disabled:cursor-not-allowed text-white font-medium py-2.5 px-5 rounded-lg w-full transition-colors flex justify-center items-center gap-2"
           >
-            Let&apos;s Talk
+            {isLoading ? (
+              <>
+                <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                Sending...
+              </>
+            ) : (
+              "Let's Talk"
+            )}
           </button>
         </form>
       </div>
+
+      {/* Success Popup Modal */}
+      {emailSubmitted && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/60 backdrop-blur-sm p-4">
+          <div className="bg-[#18191E] p-8 rounded-2xl border border-[#33353F] shadow-2xl max-w-sm w-full text-center transition-all">
+            <div className="w-20 h-20 bg-green-500/10 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-3">Message Sent!</h3>
+            <p className="text-[#ADB7BE] mb-8 text-sm leading-relaxed">
+              Thank you for reaching out. I have received your message and will get back to you shortly!
+            </p>
+            <button
+              onClick={() => setEmailSubmitted(false)}
+              className="bg-purple-500 hover:bg-purple-600 text-white font-medium py-3 px-6 rounded-lg w-full transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
