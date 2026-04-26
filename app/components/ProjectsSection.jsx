@@ -35,7 +35,7 @@ const projectsData = [
       "This is a website of Kreativ Design & Print, a company in Bloemfontein, built using ReactJS.",
     image: "/images/projects/kreativ-design.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/SidneyRamphalile/kreativebrands",
+    gitUrl: "",
     target: "_blank",
     previewUrl: "https://polite-quokka-0e16a4.netlify.app/",
   },

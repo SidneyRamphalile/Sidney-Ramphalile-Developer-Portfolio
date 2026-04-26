@@ -42,10 +42,10 @@ const Experience = () => {
     },
     {
       id: 6,
-      name: "Next JS",
-      color: "border-white",
-      bgColor: "bg-white",
-      image: "/images/projects/nextjs.png",
+      name: "Svelte",
+      color: "border-[#FF3E00]",
+      bgColor: "bg-[#FF3E00]",
+      image: "/images/projects/svelte.png",
     },
     {
       id: 7,
