@@ -29,17 +29,6 @@ const projectsData = [
     previewUrl: "https://melodious-mermaid-f0a544.netlify.app/",
   },
   {
-    id: 3,
-    title: "Kreativ Design & Print",
-    description:
-      "This is a website of Kreativ Design & Print, a company in Bloemfontein, built using ReactJS.",
-    image: "/images/projects/kreativ-design.png",
-    tag: ["All", "Web"],
-    gitUrl: "",
-    target: "_blank",
-    previewUrl: "https://polite-quokka-0e16a4.netlify.app/",
-  },
-  {
     id: 4,
     title: "Namanyane Primary School",
     description:
