@@ -37,6 +37,8 @@ const HeroSection = () => {
                 1000,
                 "Microsoft Certified: Azure Fundamentals (AZ900)",
                 1500,
+                "Microsoft Certified: Azure Data Fundamentals (DP900)",
+                1500,
                 "Microsoft 365 Certified: Fundamentals (MS900)",
                 2500,
               ]}
