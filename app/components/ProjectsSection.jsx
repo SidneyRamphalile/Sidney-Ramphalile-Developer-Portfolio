@@ -32,7 +32,7 @@ const projectsData = [
     id: 4,
     title: "Namanyane Primary School",
     description:
-      "This is a website of Namanyane Primary School, a school in my hometown, built using ReactJS.",
+      "This is a website of Namanyane Primary School, a school in my Thaba Nchu, built using ReactJS.",
     image: "/images/projects/namanyane.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/SidneyRamphalile/Namanyane-Primary-School",
