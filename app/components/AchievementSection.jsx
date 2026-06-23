@@ -17,7 +17,7 @@ const achievementsList = [
   },
   {
     metric: "Awards on LinkedIn",
-    value: "349",
+    value: "350",
   },
   {
     metric: "Digital Badges",
