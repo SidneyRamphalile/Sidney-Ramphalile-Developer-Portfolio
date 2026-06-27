@@ -16,7 +16,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar />
       <HeroSection />
-      <div className="container mt-24 mx-auto px-12 py-4">
+      <div className="container mx-auto mt-6 px-6 py-4 sm:mt-10 sm:px-12">
         <AchievementSection/>
         <AboutSection/>
         <DigitalBadges/>
