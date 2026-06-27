@@ -113,7 +113,7 @@ const AboutSection = () => {
             Coursera, LinkedIn Learning, and other platforms to deepen my
             understanding and skills in the vast landscape of technology.
           </p>
-          <div className="flex w-full flex-col gap-4 mt-8 md:flex-row md:flex-wrap md:gap-0">
+          <div className="flex w-full flex-col items-center gap-4 mt-8 md:flex-row md:flex-wrap md:gap-6 md:items-start">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
