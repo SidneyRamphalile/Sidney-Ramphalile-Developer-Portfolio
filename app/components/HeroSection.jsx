@@ -91,14 +91,41 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-5 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[320px] h-[320px] lg:w-[430px] lg:h-[430px] relative">
-            <Image
-              src="/images/sidney.png"
-              alt="Hero Image of Sidney Smiling"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={300}
-              height={300}
+          <div className="relative place-self-center">
+            {/* outer glow halo */}
+            <div className="pointer-events-none absolute -inset-6 rounded-full bg-gradient-to-br from-purple-600/40 via-blue-600/30 to-pink-600/40 blur-2xl" />
+            {/* slowly rotating orbital ring */}
+            <div
+              className="pointer-events-none absolute -inset-3 rounded-full opacity-70 animate-[spin_14s_linear_infinite]"
+              style={{
+                background:
+                  "conic-gradient(from 0deg, rgba(168,85,247,0.0), rgba(168,85,247,0.8), rgba(59,130,246,0.0), rgba(236,72,153,0.8), rgba(168,85,247,0.0))",
+                WebkitMask:
+                  "radial-gradient(transparent 47%, #000 48%, #000 50%, transparent 51%)",
+                mask: "radial-gradient(transparent 47%, #000 48%, #000 50%, transparent 51%)",
+              }}
             />
+            <div className="relative h-[320px] w-[320px] overflow-hidden rounded-full ring-1 ring-white/15 lg:h-[430px] lg:w-[430px]">
+              {/* breathtaking planet backdrop */}
+              <Image
+                src="https://images.unsplash.com/photo-1654263391025-4c4809a37f5c?q=80&w=1200&auto=format&fit=crop"
+                alt="A breathtaking planet floating in space among the stars"
+                fill
+                sizes="430px"
+                className="object-cover"
+                priority
+              />
+              {/* subtle depth shade so the portrait pops */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/10" />
+              {/* portrait in front of the planet */}
+              <Image
+                src="/images/sidney.png"
+                alt="Hero Image of Sidney Smiling"
+                width={300}
+                height={300}
+                className="absolute left-1/2 top-[60%] w-[260px] -translate-x-1/2 -translate-y-1/2 lg:w-[300px]"
+              />
+            </div>
           </div>
         </motion.div>
       </div>
