@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import CosmicBackground from "./CosmicBackground";
 
 const navLinks = [
   {
@@ -30,6 +31,26 @@ const navLinks = [
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [overHero, setOverHero] = useState(true);
+
+  // Show the cosmic background while the hero is under the navbar;
+  // fade back to the solid portfolio colour once we scroll into the
+  // achievements section (i.e. leave the hero).
+  useEffect(() => {
+    const hero = document.getElementById("hero");
+    const onScroll = () => {
+      if (!hero) return;
+      const bottom = hero.getBoundingClientRect().bottom;
+      setOverHero(bottom > 80);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
 
   const handleNavLinkClick = () => {
     setNavbarOpen(false); // Close the mobile menu when a link is clicked
@@ -37,8 +58,22 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
-      <div className="flex flex-wrap items-center justify-between mx-auto px-4 py-3">
+    <nav className="fixed top-0 left-0 right-0 z-10">
+      {/* cosmic layer — visible while over the hero */}
+      <div
+        className={`absolute inset-0 transition-opacity duration-500 ${
+          overHero ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <CosmicBackground />
+      </div>
+      {/* solid portfolio layer — fades in once you scroll past the hero */}
+      <div
+        className={`absolute inset-0 bg-[#121212] transition-opacity duration-500 ${
+          overHero ? "opacity-0" : "opacity-100"
+        }`}
+      />
+      <div className="relative flex flex-wrap items-center justify-between mx-auto px-4 py-3">
         <Link
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"

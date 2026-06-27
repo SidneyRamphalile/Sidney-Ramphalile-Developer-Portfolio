@@ -15,7 +15,10 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative w-full overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28">
+    <section
+      id="hero"
+      className="relative w-full overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28"
+    >
       <CosmicBackground />
       {/* soft vignette so text stays readable over the starfield */}
       <div
