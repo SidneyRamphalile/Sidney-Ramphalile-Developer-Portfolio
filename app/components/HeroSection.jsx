@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import CosmicBackground from "./CosmicBackground";
 
 const HeroSection = () => {
   const handleHireMeClick = (e) => {
@@ -14,8 +15,18 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="lg:py-16">
-      <div className="grid grid-cols-1 sm:grid-cols-12">
+    <section className="relative w-full overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28">
+      <CosmicBackground />
+      {/* soft vignette so text stays readable over the starfield */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(120% 90% at 50% 40%, rgba(8,8,20,0) 35%, rgba(8,8,20,0.55) 100%)",
+        }}
+      />
+      <div className="container relative mx-auto grid grid-cols-1 px-12 sm:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
