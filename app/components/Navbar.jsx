@@ -62,15 +62,15 @@ const Navbar = () => {
       {/* cosmic layer — visible while over the hero */}
       <div
         className={`absolute inset-0 transition-opacity duration-500 ${
-          overHero ? "opacity-100" : "opacity-0"
+          overHero && !navbarOpen ? "opacity-100" : "opacity-0"
         }`}
       >
         <CosmicBackground />
       </div>
-      {/* solid portfolio layer — fades in once you scroll past the hero */}
+      {/* solid portfolio layer — fades in once you scroll past the hero or when mobile menu is open */}
       <div
         className={`absolute inset-0 bg-[#121212] transition-opacity duration-500 ${
-          overHero ? "opacity-0" : "opacity-100"
+          !overHero || navbarOpen ? "opacity-100" : "opacity-0"
         }`}
       />
       <div className="relative flex flex-wrap items-center justify-between mx-auto px-4 py-3">

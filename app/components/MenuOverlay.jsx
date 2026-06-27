@@ -9,7 +9,7 @@ const MenuOverlay = ({ links, onClose }) => {
   };
 
   return (
-    <ul className="flex flex-col py-4 items-center">
+    <ul className="relative flex flex-col py-4 items-center">
       {links.map((link, index) => (
         <li key={index}>
           <NavLink
