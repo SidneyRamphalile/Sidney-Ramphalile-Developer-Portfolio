@@ -9,7 +9,7 @@ const projectsData = [
     id: 1,
     title: "Alpha Tutoring Academy",
     description:
-      "Clean, professional tutoring website for Alpha Tutoring Academy with integrated booking and parent communication.",
+      "Clean, professional tutoring website for Alpha Tutoring Academy with integrated booking, built using Svelte.",
     image: "/images/projects/alpha-tutoring-academy.png",
     tag: ["All", "Web"],
     // gitUrl: "https://github.com/SidneyRamphalile/alpha-tutoring-academy",
