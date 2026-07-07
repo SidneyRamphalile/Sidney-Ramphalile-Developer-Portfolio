@@ -87,6 +87,7 @@ const AboutSection = () => {
           src={"/images/sidney-wearing-a-suit.jpg"}
           width={800}
           height={800}
+          sizes="(max-width: 768px) 100vw, 50vw"
           alt="Sidney smiling"
         />
         <div className="mt-4 md:mt-0 text-left flex-col h-full">

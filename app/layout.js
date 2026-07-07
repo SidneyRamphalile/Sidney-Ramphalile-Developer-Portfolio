@@ -1,34 +1,107 @@
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const SITE_URL = "https://sidneyramphalile.vercel.app";
+
 export const metadata = {
-  title: "Sidney Ramphalile",
-  description: "Built by Sidney Ramphalile",
+  metadataBase: new URL(SITE_URL),
+  title: "Sidney Ramphalile | Full Stack Web Developer",
+  description:
+    "Portfolio of Sidney Ramphalile, a Full Stack Web Developer with 5 years of experience building websites with React, Svelte, Tailwind CSS, and MongoDB.",
+  keywords: [
+    "Sidney Ramphalile",
+    "Mokuoane Sidney Ramphalile",
+    "Full Stack Web Developer",
+    "Web Developer South Africa",
+    "React Developer",
+    "Svelte Developer",
+    "Portfolio",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Sidney Ramphalile | Full Stack Web Developer",
+    description:
+      "Full Stack Web Developer with 5 years of experience building websites with React, Svelte, Tailwind CSS, and MongoDB.",
+    url: SITE_URL,
+    siteName: "Sidney Ramphalile Portfolio",
+    images: [
+      {
+        url: "/images/sidney-wearing-a-suit.jpg",
+        width: 800,
+        height: 800,
+        alt: "Sidney Ramphalile",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sidney Ramphalile | Full Stack Web Developer",
+    description:
+      "Full Stack Web Developer with 5 years of experience building websites with React, Svelte, Tailwind CSS, and MongoDB.",
+    images: ["/images/sidney-wearing-a-suit.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+// Structured data so Google understands this site is about Sidney Ramphalile
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Sidney Ramphalile",
+  alternateName: "Mokuoane Sidney Ramphalile",
+  url: SITE_URL,
+  image: `${SITE_URL}/images/sidney-wearing-a-suit.jpg`,
+  jobTitle: "Full Stack Web Developer",
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Central University of Technology, Free State",
+  },
+  knowsAbout: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Svelte",
+    "Tailwind CSS",
+    "Node.js",
+    "MongoDB",
+    "Microsoft Azure",
+  ],
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* Google Analytics Tag */}
+      <body className={inter.className}>
+        {children}
         <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-2BEDFYBGHX"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-2BEDFYBGHX');
-            `,
-          }}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
-      </head>
-      <body className={inter.className}>{children}</body>
+        {/* Google Analytics — loaded after the page is interactive so it never blocks rendering */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2BEDFYBGHX"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2BEDFYBGHX');
+          `}
+        </Script>
+      </body>
     </html>
   );
 }

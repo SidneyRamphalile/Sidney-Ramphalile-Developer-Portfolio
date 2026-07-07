@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 const Experience = () => {
   const [activeTechnology, setActiveTechnology] = useState(null);
@@ -102,10 +103,12 @@ const Experience = () => {
             key={id}
             className={`text-center rounded-lg overflow-hidden shadow-md transition-transform duration-300 transform hover:scale-105 ${color} border-4`}
           >
-            <img
+            <Image
               src={image}
               alt={name}
-              className="mx-auto mb-4 md:mb-8 w-24 md:w-32 transition-transform duration-300 transform hover:scale-110"
+              width={128}
+              height={128}
+              className="mx-auto mb-4 md:mb-8 w-24 md:w-32 h-auto transition-transform duration-300 transform hover:scale-110"
             />
             <p className="text-lg font-bold text-white">{name}</p>
             {/* Glowing background with the respective color */}

@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 const digitalBadges = [
   {
@@ -94,9 +95,11 @@ const DigitalBadges = () => {
             className="rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105"
           >
             {/* Set uniform image size for all badges */}
-            <img
+            <Image
               src={image}
               alt={name}
+              width={256}
+              height={256}
               className="w-64 h-64 object-contain mx-auto"
             />
             <p className="text-lg font-semibold text-white mt-2">{name}</p>

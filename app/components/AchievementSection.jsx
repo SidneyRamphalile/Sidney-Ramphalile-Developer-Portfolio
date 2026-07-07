@@ -1,13 +1,6 @@
 "use client";
-import React from "react";
-import dynamic from "next/dynamic";
-
-const AnimatedNumbers = dynamic(
-  () => {
-    return import("react-animated-numbers");
-  },
-  { ssr: false }
-);
+import React, { useEffect, useRef, useState } from "react";
+import { useInView } from "framer-motion";
 
 const achievementsList = [
   {
@@ -33,6 +26,31 @@ const achievementsList = [
   },
 ];
 
+// Lightweight count-up that starts when scrolled into view.
+// No external library needed, so it renders instantly with the page.
+const AnimatedNumber = ({ value }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const [display, setDisplay] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) return;
+    const duration = 1500;
+    const start = performance.now();
+    let raf;
+    const tick = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+      setDisplay(Math.round(eased * value));
+      if (progress < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [isInView, value]);
+
+  return <span ref={ref}>{display.toLocaleString("en-US")}</span>;
+};
+
 const AchievementsSection = () => {
   return (
     <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
@@ -45,19 +63,7 @@ const AchievementsSection = () => {
             >
               <h2 className="text-white text-4xl font-bold flex flex-row">
                 {achievement.prefix}
-                <AnimatedNumbers
-                  includeComma
-                  animateToNumber={parseInt(achievement.value)}
-                  locale="en-US"
-                  className="text-white text-4xl font-bold"
-                  configs={(_, index) => {
-                    return {
-                      mass: 1,
-                      friction: 100,
-                      tensions: 140 * (index + 1),
-                    };
-                  }}
-                />
+                <AnimatedNumber value={parseInt(achievement.value)} />
                 {achievement.postfix}
               </h2>
               <p className="text-[#ADB7BE] text-base text-center">

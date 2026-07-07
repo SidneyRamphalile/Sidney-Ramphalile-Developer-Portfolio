@@ -111,7 +111,7 @@ const HeroSection = () => {
             <div className="relative h-[320px] w-[320px] overflow-hidden rounded-full ring-1 ring-white/15 lg:h-[430px] lg:w-[430px]">
               {/* breathtaking planet backdrop */}
               <Image
-                src="https://images.unsplash.com/photo-1654263391025-4c4809a37f5c?q=80&w=1200&auto=format&fit=crop"
+                src="/images/planet-backdrop.jpg"
                 alt="A breathtaking planet floating in space among the stars"
                 fill
                 sizes="430px"
@@ -126,6 +126,7 @@ const HeroSection = () => {
                 alt="Hero Image of Sidney Smiling"
                 width={300}
                 height={300}
+                priority
                 className="absolute left-1/2 top-[60%] w-[260px] -translate-x-1/2 -translate-y-1/2 lg:w-[300px]"
               />
             </div>
