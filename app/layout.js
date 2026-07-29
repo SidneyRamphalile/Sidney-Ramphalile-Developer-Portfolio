@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -88,19 +88,8 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
-        {/* Google Analytics — loaded after the page is interactive so it never blocks rendering */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-2BEDFYBGHX"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-2BEDFYBGHX');
-          `}
-        </Script>
+        {/* Vercel Web Analytics — visit counts appear in your Vercel project dashboard */}
+        <Analytics />
       </body>
     </html>
   );
