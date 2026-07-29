@@ -18,7 +18,7 @@ export async function POST(req) {
       from: process.env.FROM_EMAIL || "onboarding@resend.dev",
       to: [process.env.TO_EMAIL || "your-email@gmail.com"], // Important: if using free tier, this MUST be the email address you registered with Resend
       subject: subject,
-      reply_to: email,
+      replyTo: email,
       html: `
         <div style="font-family: sans-serif; padding: 20px;">
           <h2>New Contact Form Message</h2>
