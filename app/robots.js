@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://sidneyramphalile.vercel.app/sitemap.xml",
+    sitemap: "https://www.sidneyramphalile.online/sitemap.xml",
   };
 }

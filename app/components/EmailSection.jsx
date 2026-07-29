@@ -77,6 +77,21 @@ const EmailSection = () => {
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>
+        {/* cosmic visual that fills the column alongside the taller form */}
+        <div className="relative mt-10 hidden md:block">
+          <div className="pointer-events-none absolute -inset-4 rounded-3xl bg-gradient-to-br from-purple-600/30 via-blue-600/20 to-pink-600/30 blur-2xl" />
+          <div className="relative overflow-hidden rounded-2xl ring-1 ring-white/15">
+            <Image
+              src="/images/orion-nebula.jpg"
+              alt="The Orion Nebula glowing in deep space"
+              width={1280}
+              height={1280}
+              sizes="(max-width: 768px) 100vw, 40vw"
+              className="h-72 w-full object-cover transition-transform duration-700 hover:scale-105"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent" />
+          </div>
+        </div>
       </div>
       <div>
         <form className="flex flex-col" onSubmit={handleSubmit}>

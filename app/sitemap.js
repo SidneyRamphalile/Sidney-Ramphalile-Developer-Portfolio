@@ -1,7 +1,7 @@
 export default function sitemap() {
   return [
     {
-      url: "https://sidneyramphalile.vercel.app",
+      url: "https://www.sidneyramphalile.online",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,

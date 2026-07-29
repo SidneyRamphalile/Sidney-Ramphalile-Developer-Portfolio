@@ -4,7 +4,7 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const SITE_URL = "https://sidneyramphalile.vercel.app";
+const SITE_URL = "https://www.sidneyramphalile.online";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
