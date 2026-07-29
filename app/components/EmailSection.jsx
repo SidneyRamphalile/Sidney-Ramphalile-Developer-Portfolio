@@ -98,6 +98,25 @@ const EmailSection = () => {
           </div>
           <div className="mb-6">
             <label
+              htmlFor="whatsapp"
+              className="text-white block mb-2 text-sm font-medium"
+            >
+              WhatsApp number{" "}
+              <span className="text-[#ADB7BE] font-normal">(optional)</span>
+            </label>
+            <input
+              name="whatsapp"
+              type="tel"
+              id="whatsapp"
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="+27 82 123 4567"
+            />
+            <p className="text-[#ADB7BE] text-xs mt-2">
+              Leave your number if you&apos;d prefer a reply on WhatsApp.
+            </p>
+          </div>
+          <div className="mb-6">
+            <label
               htmlFor="subject"
               className="text-white block text-sm mb-2 font-medium"
             >
@@ -122,6 +141,8 @@ const EmailSection = () => {
             <textarea
               name="message"
               id="message"
+              required
+              rows={5}
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="Let's talk about..."
             />
