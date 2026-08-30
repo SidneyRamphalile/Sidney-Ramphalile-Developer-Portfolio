@@ -162,12 +162,13 @@ const projectsData = [
     id: 15,
     title: "Thaba Nchu SDA Church",
     description:
-      "This is my first ever website built. It's a website of Thaba Nchu Seventh-Day Adventist church.",
+      "My very first website, hand-coded from scratch over 5 months as a self-taught beginner in the pre-AI era. It's no longer in use - church leadership has since changed - but I keep it here as an archive of where I started.",
     image: "/images/projects/thaba-nchu.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/SidneyRamphalile/Thaba-Nchu-SDA-Church",
     target: "_blank",
     previewUrl: "https://courageous-profiterole123happy7smile.netlify.app/",
+    deprecated: true,
   },
 ];
 
@@ -237,6 +238,7 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              deprecated={project.deprecated}
             />
           </motion.li>
         ))}
