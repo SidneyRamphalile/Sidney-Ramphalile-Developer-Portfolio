@@ -52,6 +52,8 @@ const TAB_DATA = [
     id: "professional-development",
     content: (
       <ul className="list-disc pl-2">
+        <li>Meta Back-End Developer Professional Certificate (Coursera)</li>
+        <br />
         <li>Full Stack Web Development Training Certificate (DevTown)</li>
         <br />
         <li>Google IT Support Professional Certificate (Coursera)</li>
@@ -101,10 +103,11 @@ const AboutSection = () => {
             <br />
             <br />
             I&apos;ve further expanded my knowledge through extensive
-            professional development including Google and Microsoft professional
-            certificates in IT Support, Cybersecurity, Data Analytics, and AI
-            Essentials, demonstrating my commitment to continuous learning in
-            the rapidly evolving tech landscape.
+            professional development including the Meta Back-End Developer
+            Professional Certificate as well as Google and Microsoft
+            professional certificates in IT Support, Cybersecurity, Data
+            Analytics, and AI Essentials, demonstrating my commitment to
+            continuous learning in the rapidly evolving tech landscape.
             <br />
             <br />
             My venture into programming commenced in 2020 during a global

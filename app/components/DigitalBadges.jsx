@@ -76,6 +76,12 @@ const digitalBadges = [
     image: "/images/projects/aws-educate-getting-started-with-compute.png",
     link: "https://www.credly.com/badges/7deff335-1ba3-4e42-8992-5219e5999a41",
   },
+  {
+    id: 13,
+    name: "Meta Back-End Developer Professional Certificate",
+    image: "/images/projects/meta-backend-developer-digital-badge.png",
+    link: "https://www.credly.com/badges/4b90c2f3-b0a4-41e8-9027-c4f7532051c4",
+  },
 ];
 
 const DigitalBadges = () => {

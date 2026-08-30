@@ -75,7 +75,19 @@ const personJsonLd = {
     "Tailwind CSS",
     "Node.js",
     "MongoDB",
+    "Python",
+    "Django",
+    "REST APIs",
     "Microsoft Azure",
+  ],
+  hasCredential: [
+    {
+      "@type": "EducationalOccupationalCredential",
+      name: "Meta Back-End Developer Professional Certificate",
+      credentialCategory: "Professional Certificate",
+      recognizedBy: { "@type": "Organization", name: "Meta" },
+      url: "https://www.credly.com/badges/4b90c2f3-b0a4-41e8-9027-c4f7532051c4",
+    },
   ],
 };
 
