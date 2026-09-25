@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,6 +23,16 @@ export const metadata = {
   ],
   alternates: {
     canonical: "/",
+  },
+  // Google ignores a favicon smaller than 48px and falls back to a grey globe,
+  // which is what the old 32×32 favicon.ico was getting. These are built from
+  // the portrait by scripts/make-icons.mjs.
+  icons: {
+    icon: [
+      { url: "/icon.png", sizes: "48x48", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
   },
   openGraph: {
     title: "Sidney Ramphalile | Full Stack Web Developer",
@@ -102,6 +113,9 @@ export default function RootLayout({ children }) {
         />
         {/* Vercel Web Analytics — visit counts appear in your Vercel project dashboard */}
         <Analytics />
+        {/* Google Analytics — country, device and traffic sources. Silent
+            until NEXT_PUBLIC_GA_ID is set. */}
+        <GoogleAnalytics />
       </body>
     </html>
   );
