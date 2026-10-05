@@ -9,11 +9,11 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>HTML, CSS, JavaScript</li>
+        <li>HTML, CSS, JavaScript, TypeScript</li>
         <li>React JS, Svelte, Tailwind CSS</li>
         <li>Node JS, Express JS</li>
         <li>Mongo DB, SQL</li>
-        <li>Python</li>
+        <li>Python, Django</li>
         <li>GitHub</li>
         <li>Linux</li>
         <li>Microsoft Azure</li>
