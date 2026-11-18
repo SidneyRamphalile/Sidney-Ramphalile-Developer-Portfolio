@@ -44,6 +44,7 @@ const TAB_DATA = [
         <li>Microsoft Certified: Azure Data Fundamentals (DP900)</li>
         <li>Microsoft Certified: Azure AI Fundamentals (AI900)</li>
         <li>Microsoft 365 Certified: Fundamentals (MS900)</li>
+        <li>Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC900)</li>
       </ul>
     ),
   },
@@ -99,7 +100,7 @@ const AboutSection = () => {
             deep passion for technology. I hold a National Diploma in Electrical
             Engineering from the Central University of Technology, Free State,
             South Africa, along with industry-recognized Microsoft certifications
-            in Azure Fundamentals (AZ900), Azure Data Fundamentals (DP900), Azure AI Fundamentals (AI900), and 365 Fundamentals (MS900).
+            in Azure Fundamentals (AZ900), Azure Data Fundamentals (DP900), Azure AI Fundamentals (AI900), 365 Fundamentals (MS900), and Security, Compliance, and Identity Fundamentals (SC900).
             <br />
             <br />
             I&apos;ve further expanded my knowledge through extensive
