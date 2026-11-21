@@ -17,7 +17,6 @@ const TAB_DATA = [
         <li>GitHub</li>
         <li>Linux</li>
         <li>Microsoft Azure</li>
-        <li>Amazon Web Services (AWS)</li>
       </ul>
     ),
   },
