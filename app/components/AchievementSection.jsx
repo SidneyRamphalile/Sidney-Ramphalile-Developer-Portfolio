@@ -18,7 +18,7 @@ const achievementsList = [
   },
    {
     metric: "Certifications",
-    value: "4",
+    value: "5",
   },
   {
     metric: "Years in Web Development",
